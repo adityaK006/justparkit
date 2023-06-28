@@ -1,27 +1,112 @@
-/* CSS styling for the page */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f3f3f3;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.empty-slots-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #555;
+  background-color: #ffcc00;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.parking-slots-tab,
+.manage-slots-tab {
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  background-color: #669900;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.parking-slots-tab:hover,
+.manage-slots-tab:hover {
+  background-color: #4d7c00;
+}
+
+.active {
+  display: block;
+}
+
+.slots-container {
+  display: grid;
+  grid-template-columns: repeat(10, calc(45px)); /* Adjust the gap by changing the 5px value */
+  grid-template-rows: repeat(8, calc(45px)); /* Adjust the gap by changing the 5px value */
+  gap: 5px; /* Adjust the gap between the slots */
+  justify-items: stretch;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+
+.row-gap {
+  height: 10px;
+}
+
+.slot {
+  width: 80px;
+  height: 40px; /* Adjust the height as desired */
+  margin-right: 5px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 12px;
+}
+
+.slot.booked {
+  background-color: #ff6666;
+  border-color: #ff6666;
+  color: #fff;
+}
+
+.slot:hover {
+  background-color: #c2c2c2;
+}
+
+.slot.booked:hover {
+  background-color: #ff4d4d;
+  border-color: #ff4d4d;
+}
+
+.slot.selected {
+  background-color: #6699ff;
+  border-color: #6699ff;
+  color: #fff;
+}
+
+.slot.selected:hover {
+  background-color: #4d79ff;
+  border-color: #4d79ff;
+}
+
+@media (max-width: 768px) {
+  .slot {
+    width: 50px;
+    height: 25px;
+    margin-right: 1px;
   }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-  }
-  
-  .empty-slots-tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #555;
-    background-color: #ffcc00;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
+}
   
   .parking-slots-tab,
   .manage-slots-tab {
