@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>College Parking Lot Booking</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>College Parking Lot Booking</h1>
+    <div class="empty-slots-tab">
+      <span class="empty-slots-count">0</span> Empty Slots
+    </div>
+    <div class="parking-slots-tab" id="parkingSlotsTab" onclick="showManageSlots()">Parking Slots</div>
+    <div class="manage-slots-tab" id="manageSlotsTab" onclick="showParkingSlots()">Go to Home</div>
+    <div class="manage-slots-container" id="manageSlotsContainer">
+      <div class="slots-container">
+        <!-- Slots go here -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
